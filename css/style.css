@@ -6,3 +6,18 @@
 h1{
 	text-align: center;
 }
+#content{
+	margin: 0 15px 0 15px;
+}
+.col-lr-3, .col-md-3, .col-sm-3{
+	width: 40%;
+}
+.col-lr-6, .col-md-6, .col-sm-6{
+	width: 50%;
+}
+.col-lr-1, .col-md-1, .col-sm-1{
+	width: 8.33%;
+}
+.col-lr-2, .col-md-2, .col-sm-2{
+	width: 16%;
+}
