@@ -1,0 +1,5 @@
+<form action="delete.php" method="post" onended="alert('Done')">
+<h1>Are you sure?</h1>
+<br><button type="submit" name="yes" value="<?php echo $_GET['profile_id']?>">Yes, delete</button>
+<button type="button" onclick="window.location='index.php'">Nope, go back</button>
+</form>

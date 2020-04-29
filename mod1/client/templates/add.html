@@ -1,0 +1,49 @@
+<form action="add.php" method="post">
+    <label>
+        <span>First name:</span>
+        <input name="fm" id="fm" type="text">
+    </label>
+    <br>
+    <label>
+        <span>Last name:</span>
+        <input name="lm" id="lm" type="text">
+    </label>
+    <br>
+    <label>
+        <span>E-mail:</span>
+        <input name="em" id="email" type="text">
+    </label>
+    <br>
+    <label>
+        <span>Headline:</span>
+        <input name="hl" id="hl" type="text">
+    </label>
+    <br>
+    <label>
+        <span>Summary:</span>
+        <input name="sm" id="sm" type="text">
+    </label>
+    <br>
+    <input type="submit" onclick="return doValidate()" value="Add">
+    <button type="button" onclick="window.location = 'index.php'">Cancel</button>
+</form>
+<script>
+    function doValidate() {
+        if(document.getElementById('email').value.indexOf('@') === -1){
+            alert('Invalid e-mail');
+            return false;
+        } else if(!document.getElementById('fm').value){
+            alert('All fields must be filled out');
+            return false;
+        } else if(!document.getElementById('lm').value){
+            alert('All fields must be filled out');
+            return false;
+        } else if(!document.getElementById('hl').value){
+            alert('All fields must be filled out');
+            return false;
+        } else if(!document.getElementById('sm').value){
+            alert('All fields must be filled out');
+            return false;
+        }
+    }
+</script>

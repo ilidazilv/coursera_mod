@@ -1,0 +1,37 @@
+<h1>Please Log In</h1>
+<form action="login.php" method="post" >
+<label>
+    <span>Email</span>
+        <input id="email" name="email" type="text"/>
+        </label>
+    <br>
+    <label>
+        <span>Password</span>
+        <input id="pass" name="pass" type="password"/>
+    </label>
+    <br>
+    <input type="submit" onclick="return doValidate()" value="Log In">
+    <input type="submit" name="cancel" value="Cancel">
+</form>
+<script type="text/javascript">
+    function doValidate() {
+        console.log('Validating...');
+        try {
+            email = document.getElementById('email').value;
+            pw = document.getElementById('pass').value;
+            console.log("Validating pw="+pw);
+            if (pw == null || pw == "") {
+                alert("Both fields must be filled out");
+                return false;
+            }
+            if(email.indexOf('@') === -1){
+                alert("Invalid email");
+                return false;
+            }
+            return true;
+        } catch(e) {
+            return false;
+        }
+        return false;
+    }
+</script>
