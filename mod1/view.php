@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-$stmt = $connection->prepare('SELECT * FROM Profile WHERE first_name = :em');
+$stmt = $connection->prepare('SELECT * FROM Profile WHERE profile_id = :em');
 $stmt->execute(array(
     ':em' => $_GET['profile_id']
 ));

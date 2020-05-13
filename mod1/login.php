@@ -1,12 +1,12 @@
 <?php
 session_start();
 include 'connection.php';
-if(!$_SESSION['user_id']) {
-    if ($_POST['cancel']) {
+if(!isset($_SESSION['user_id'])) {
+    if (isset($_POST['cancel'])) {
         header('Location: index.php');
     }
 
-    if ($_POST['email']) {
+    if (isset($_POST['email'])) {
         $salt = 'XyZzy12*_';
         $check = hash('md5', $salt . $_POST['pass']);
         $stmt = $connection->prepare('SELECT user_id, name FROM users WHERE email = :em AND password = :pw');
