@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+  background: url("/images/bg.jpg") no-repeat center;
+  background-size: cover;
+}
+#start{
+  height: 100vh;
+  font-family: 'Lobster', cursive;
+}
+#centerWrld{
+  font-size: 10vh;
+  color: #4dbc5f;
+}
