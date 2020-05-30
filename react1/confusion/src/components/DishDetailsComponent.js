@@ -29,8 +29,8 @@ class CommentForm extends Component{
     }
 
     handleComments(values){
-        console.log("Current state is " + JSON.stringify(values));
-        alert("Current state is " + JSON.stringify(values));
+        this.toggleModalComment();
+        this.props.addComments(this.props.dishId, values.rating, values.name, values.comment);
     }
 
     toggleModalComment(){
@@ -102,7 +102,7 @@ function RenderCard({dish}){
             </CardBody>
         </div>)
     }
-function RenderComments({comments}){
+function RenderComments({comments, addComments, dishId}){
         const CommentsComponent = comments.map((comment) => {
             return (
                 <div key={comment.id}>
@@ -114,6 +114,7 @@ function RenderComments({comments}){
             <div>
                 <h3>Comments</h3>
                 {CommentsComponent}
+                <CommentForm dishId={dishId} addComments={addComments}/>
             </div>
         )
     }
@@ -136,8 +137,7 @@ const DishDetails = (props) => {
                             <RenderCard dish={props.dish} />
                         </div>
                         <div className="col-12 col-md-5 m-1">
-                            <RenderComments comments={props.comments} />
-                            <CommentForm/>
+                            <RenderComments comments={props.comments} addComments={props.addComments} dishId={props.dish.id}/>
                         </div>
                     </div>
                 </div>

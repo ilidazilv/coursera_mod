@@ -1,24 +1,28 @@
 import React, {Component} from 'react';
-import {Col, Row, Button} from 'reactstrap';
+import {Col, Row, Button, Fade} from 'reactstrap';
 
 class Start extends Component{
+    constructor(props) {
+        super(props);
+        this.props.changeBG('start');
+    }
     render() {
         return (
-            <div id="start" className="container">
+            <Fade id="start" className="container-fluid">
                 <div className="h-25"/>
                 <Row className="justify-content-center">
-                    <div id="centerWrld">Welcome to my world</div>
+                    <div id="centerWrld" className="text-danger shadow">Welcome to my world</div>
                 </Row>
                 <Row>
                     <Col md={6}>
-                        <Button className="float-right">Portfolio</Button>
+                        <Button className="float-right" href="/portfolio">Portfolio</Button>
                     </Col>
                     <Col md={6}>
-                        <Button to="">GitHub</Button>
+                        <Button href="https://github.com/ilidazilv/coursera_mod/tree/master/portfolio" target="_blank">GitHub</Button>
                     </Col>
                 </Row>
 
-            </div>
+            </Fade>
         )
     }
 }
