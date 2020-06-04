@@ -1,0 +1,51 @@
+.loadComponent-appear {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+.loadComponent-appear.loadComponent-appear-active {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    transition: all 0.6s linear;
+}
+.loadComponent-enter {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+.loadComponent-enter.loadComponent-enter-active {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    transition: all 0.6s linear 0.4s;
+}
+.loadComponent-leave {
+    opacity: 1.0;
+    position:absolute
+}
+.loadComponent-leave.loadComponent-leave-active {
+    opacity: 0;
+    transition: all 0.6s linear;
+    position:absolute;
+}
+.socialMediaAnime-appear{
+    opacity: 0;
+
+}
+.socialMediaAnime-appear.socialMediaAnime-appear-active {
+    opacity: 1;
+    transition: all 0.4s linear;
+}
+.loadComponent-enter {
+    opacity: 0;
+}
+.socialMediaAnime-enter.socialMediaAnime-enter-active {
+    opacity: 1;
+    transition: all 0.4s linear 0.2s;
+}
+.socialMediaAnime-leave {
+    opacity: 1.0;
+    position:absolute
+}
+.socialMediaAnime-leave.socialMediaAnime-leave-active {
+    opacity: 0;
+    transition: all 0.4s linear;
+    position:absolute;
+}

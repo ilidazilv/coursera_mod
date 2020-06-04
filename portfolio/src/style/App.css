@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import "animations.css";
+#start{
+  height: 100vh;
+  font-family: 'Chelsea Market', cursive;
+}
+#centerWrld{
+  font-size: 10vh;
+}
+#portfolio{
+  height: 100vh;
+}
+#navbar{
+  z-index: 2;
+}
+.messages{
+  font-family: 'Lobster', cursive;
+  font-size: 3vh;
+}
+#messagesBlock > span > div {
+  margin: 5px;
+}
+.socialMedia{
+  font-family: 'Piedra', cursive;
+  align-self: center;
+}
+
+.AboutMeCom{
+  font-family: 'Roboto Mono', monospace;
+}
+.bg-portfolio{
+  background: url("/images/bg3.jpg") no-repeat center;
+  background-size: cover;
+}
+.bg-start{
+  background: url("/images/bg1.png") no-repeat center;
+  background-size: cover;
+}
+#examples{
+  font-family: 'Roboto Mono', monospace;
+}

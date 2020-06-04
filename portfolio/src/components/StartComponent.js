@@ -15,10 +15,10 @@ class Start extends Component{
                 </Row>
                 <Row>
                     <Col md={6}>
-                        <Button className="float-right" href="/portfolio">Portfolio</Button>
+                        <Button className="float-right bg-dark" href="/portfolio">Portfolio</Button>
                     </Col>
                     <Col md={6}>
-                        <Button href="https://github.com/ilidazilv/coursera_mod/tree/master/portfolio" target="_blank">GitHub</Button>
+                        <Button className="bg-dark" href="https://github.com/ilidazilv/coursera_mod/tree/master/portfolio" target="_blank">GitHub</Button>
                     </Col>
                 </Row>
 

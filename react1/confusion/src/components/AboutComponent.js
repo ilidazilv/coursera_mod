@@ -1,13 +1,14 @@
 import React from 'react';
 import {Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import {baseUrl} from "../shared/baseURL";
 
 function RenderLeader ({leaders}){
     const leadersComponent = leaders.map((leader) => {
         return (
             <div className="row" key={leader.id}>
             <Media className="col-5 col-sm-3 col-md-2">
-                <Media object src={leader.image} />
+                <Media object src={baseUrl + leader.image} />
 
             </Media>
         <div className="col-7 col-sm-9 col-md-10">

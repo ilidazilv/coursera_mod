@@ -1,0 +1,10 @@
+.slides{
+    background: url("/images/food1.jpg") no-repeat center;
+    background-size: cover;
+    height: 50vh;
+}
+.jumbotron{
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+}
+

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Col, Row, Fade} from 'reactstrap';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import {Col, Row, Fade, Button} from 'reactstrap';
 
 class SocialMedia extends Component{
     render() {
@@ -40,26 +39,6 @@ class SocialMedia extends Component{
         )
     }
 }
-class MessagesBlock extends Component {
-    render() {
-        return (
-            <ReactCSSTransitionGroup transitionAppear={true}
-                                     transitionAppearTimeout={600}
-                                     transitionEnterTimeout={600}
-                                     transitionLeaveTimeout={200}
-                                     transitionName="loadComponent">
-                <Row><div className="bg-success p-1 rounded text-white messages">Hello, I'm</div></Row>
-                <Row className="d-flex flex-row-reverse"><div className="bg-success p-1 rounded float-right text-white messages">Dmytro Boiko</div></Row>
-                <Row><div className="bg-success p-1 rounded text-white messages">and I'm a web-developer</div></Row>
-                <Row className="d-flex flex-row-reverse">
-                    <div className="bg-success p-1 rounded text-white messages">React, Redux, Nodejs</div>
-                </Row>
-                <Row className="d-flex flex-row-reverse"><div className="bg-success p-1 rounded text-white messages">CSS, Bootstrap</div></Row>
-                <Row className="d-flex flex-row-reverse"><div className="bg-success p-1 rounded text-white messages">Clear JS and JQuery</div></Row>
-            </ReactCSSTransitionGroup>
-        );
-    }
-}
 class AboutMe extends Component{
     render() {
         return (
@@ -81,6 +60,22 @@ class AboutMe extends Component{
             </Fade>
         )
     }
+}
+const Examples = () => {
+    return (
+        <div id="examples">
+            <h4 className="text-center">Examples of my projects</h4>
+            <Row className="d-flex m-2 justify-content-center">
+                <Button className="bg-dark shadow">Web-store</Button>
+            </Row>
+            <Row className="d-flex m-2 justify-content-center">
+                <Button className="bg-dark shadow">Web-site for restaurant(with booking)</Button>
+            </Row>
+            <Row className="d-flex m-2 justify-content-center">
+                <Button className="bg-dark shadow">Static web-site for restaurant</Button>
+            </Row>
+        </div>
+    )
 }
 class Portfolio extends Component{
     constructor(props) {
@@ -113,7 +108,10 @@ class Portfolio extends Component{
                     <SocialMedia/>
                     <Col md={6} >
                         <Fade className="d-flex justify-content-center mt-5">
-                            <img width={256} src="./images/avatar.JPG" height={256}  className="rounded-circle shadow" id="avatar" alt="avatar"/>
+                            {/*<img width={256} src="./images/avatar.JPG" height={256} className="rounded-circle shadow"
+                                  id="avatar" alt="avatar"/>
+                            */}
+                            <Examples/>
                         </Fade>
                     </Col>
                 </Row>
