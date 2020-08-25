@@ -1,10 +1,39 @@
-.slides{
-    background: url("/images/food1.jpg") no-repeat center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.fontKalam{
+    font-family: 'Kalam', cursive;
+}
+.carouselBckgrnd{
+    background: url("/images/carousel1.jpg") no-repeat center;
     background-size: cover;
-    height: 50vh;
+    font-size: 12vh;
 }
-.jumbotron{
-    border-radius: 0 !important;
-    margin-bottom: 0 !important;
+.headerHeight{
+    height: 9vh;
 }
-
+.mainHeight{
+    height: 91vh;
+}
+.carouselItemMy{
+    margin-top: 20%;
+}
+@media (max-width: 992px){
+    .headerHeight{
+        height: auto;
+        z-index: 2;
+    }
+    .mainHeight{
+        z-index: -1;
+        height: 89vh;
+    }
+    .carouselItemMy{
+        margin-top: 30%;
+    }
+}
+.homeFontSize{
+    font-size: 3vh;
+}
